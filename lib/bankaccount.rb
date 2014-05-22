@@ -1,3 +1,5 @@
+require 'receipt'
+
 class BankAccount
 
 	def initialize(balance=0)
@@ -7,7 +9,7 @@ class BankAccount
 	def withdrawl(amount, printer)
 		raise if amount > @balance
 		@balance = @balance - amount
-		printer.print(balance, amount)
+		printer.print(@balance, amount)
 		@balance
 	end
 

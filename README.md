@@ -15,6 +15,7 @@ Statements list transactions with date, amount and balance
 
 
 The Rules
+
 1. One level of indentation per method
 2. Don’t use the ELSE keyword 
 3. Wrap all primitives and Strings. 

@@ -1,10 +1,12 @@
 class Receipt 
 
-  def initialize(balance)
+  def initialize(balance, amount)
     @balance = balance
+    @amount = amount
   end
 
 	def print
-		"balance: #{@balance}, date: #{Time.now}"
-	end
+		"balance: #{@balance}, amount: #{@amount}, date: #{Time.now}"
+  end
+
 end
