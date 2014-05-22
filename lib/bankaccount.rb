@@ -1,12 +1,13 @@
 require 'receipt'
+require 'money'
 
 class BankAccount
-	def initialize(balance=0)
+	def initialize(balance=Money.zero)
 	  @balance = balance
 	end
 
 	def withdrawl(amount, printer)
-		raise if amount > @balance
+		raise if amount.biggerThan(@balance)
 		@balance = @balance - amount
 		printer.print(@balance, amount)
 		@balance
