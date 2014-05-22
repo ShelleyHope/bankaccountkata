@@ -12,7 +12,6 @@ describe "BankAccount" do
     expect { bankaccount.withdrawl(1, printer) }.to raise_error(RuntimeError)
   end
 
-
   context 'non-empty account'
   it 'should dispense money up to the funds available' do
     expect(bankaccount.withdrawl(1, printer)).to eq 0
