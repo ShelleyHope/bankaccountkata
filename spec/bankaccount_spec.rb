@@ -23,4 +23,11 @@ describe "BankAccount" do
     	expect(bankaccount.deposit(0)).to eq 1
     	expect(bankaccount.deposit(1)).to eq 2
 	end
+
+	context 'printing confirmation'
+		it 'should print balance after withdrawl' do
+			printer = double("printer")
+			bankaccount.withdrawl(3, printer)
+			expect{printer.print("balance: 3, date: 2014-05-09 11:39:07 UTC")}
+		end
 end

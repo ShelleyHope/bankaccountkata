@@ -5,6 +5,6 @@ class Receipt
   end
 
 	def print
-		"balance: #{@balance}"
+		"balance: #{@balance}, date: #{Time.now}"
 	end
 end

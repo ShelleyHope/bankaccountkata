@@ -4,14 +4,16 @@ class BankAccount
 	  @balance = balance
 	end
 
-	def withdrawl(amount)
+	def withdrawl(amount, printer)
 		raise if amount > @balance
 		@balance = @balance - amount
+		printer.print(balance, amount)
+		@balance
 	end
 
 	def deposit(amount)
 		@balance = @balance + amount
 	end
 
-	
+
 end
